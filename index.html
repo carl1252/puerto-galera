@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Puerto Galera Visitor Guide</title>
+<style>
+:root{--bg:#f4fbfb;--card:#fff;--ink:#12303a;--mut:#58737c;--acc:#0a8f9c;--acc2:#e8f6f7;--bd:#d3e6e8;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0c1d22;--card:#12292f;--ink:#e6f4f5;--mut:#8fb0b6;--acc:#3cc4d1;--acc2:#163740;--bd:#244650}}
+:root[data-theme="dark"]{--bg:#0c1d22;--card:#12292f;--ink:#e6f4f5;--mut:#8fb0b6;--acc:#3cc4d1;--acc2:#163740;--bd:#244650}
+*{box-sizing:border-box}html{scroll-padding-top:56px;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}
+nav{position:sticky;top:env(safe-area-inset-top,0px);background:var(--card);border-bottom:1px solid var(--bd);display:flex;gap:4px;overflow-x:auto;padding:8px 12px;z-index:5}
+nav a{color:var(--ink);text-decoration:none;padding:6px 12px;border-radius:99px;white-space:nowrap;font-size:14px}
+nav a:hover{background:var(--acc2)}
+header{padding:56px 20px 44px;text-align:center;background:linear-gradient(135deg,#0a8f9c,#0b5e86);color:#fff}
+header h1{margin:0 0 8px;font-size:clamp(30px,7vw,52px)}header p{max-width:620px;margin:0 auto;opacity:.92}
+section{max-width:1000px;margin:0 auto;padding:36px 16px}
+h2{margin:0 0 6px;font-size:26px}.sub{color:var(--mut);margin:0 0 18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px}
+.card h3{margin:0 0 4px;font-size:18px}.tag{display:inline-block;background:var(--acc2);color:var(--acc);font-size:12px;padding:2px 9px;border-radius:99px;margin-bottom:8px;font-weight:600}
+.card p{margin:4px 0;color:var(--mut);font-size:14.5px}
+.ev{display:flex;gap:14px;align-items:center;margin-bottom:10px}
+.cd{min-width:78px;text-align:center;background:var(--acc2);border-radius:12px;padding:8px 4px;color:var(--acc);font-weight:700}
+.cd b{display:block;font-size:26px;line-height:1}.cd small{font-size:11px;font-weight:600}
+.tools{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+input,select{font:inherit;padding:9px 12px;border:1px solid var(--bd);border-radius:10px;background:var(--card);color:var(--ink);min-width:0}
+input{flex:1 1 180px}
+.pill{border:1px solid var(--bd);background:var(--card);color:var(--ink);padding:8px 14px;border-radius:99px;cursor:pointer;font:inherit;font-size:14px}
+.pill.on{background:var(--acc);color:#fff;border-color:var(--acc)}
+ol.rules{padding-left:20px}ol.rules li{margin-bottom:8px}
+.note{background:var(--acc2);border-radius:12px;padding:12px 14px;font-size:14px;color:var(--mut);margin-top:14px}
+.card.tap{cursor:pointer;transition:transform .15s,border-color .15s}.card.tap:hover{transform:translateY(-2px);border-color:var(--acc)}
+.more{color:var(--acc);font-size:13px;font-weight:600;margin-top:8px}
+#md{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:center;justify-content:center;padding:16px;z-index:20}
+#md.on{display:flex}.box{background:var(--card);border-radius:18px;max-width:520px;width:100%;max-height:90%;overflow:auto}
+.ban{height:150px;display:flex;align-items:center;justify-content:center;font-size:64px;background:linear-gradient(135deg,#0a8f9c,#0b5e86)}
+.bd{padding:18px}.bd h3{margin:0 0 4px;font-size:22px}.bd ul{padding-left:18px;color:var(--mut);font-size:14.5px}
+.btns{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.btns a,.btns button{font:inherit;font-size:14px;padding:9px 14px;border-radius:10px;border:1px solid var(--bd);background:var(--card);color:var(--ink);text-decoration:none;cursor:pointer}
+.btns a.pr{background:var(--acc);color:#fff;border-color:var(--acc)}
+footer{text-align:center;color:var(--mut);font-size:13px;padding:28px 16px 40px}
+</style></head><body>
+<nav><a href="#places">Places</a><a href="#stay">Hotels</a><a href="#rules">Website Policies</a></nav>
+<header><h1>🌴 Puerto Galera</h1><p>Oriental Mindoro's beach and diving getaway. Find the best spots, see what's coming up, and plan your stay safely.</p></header>
+
+<section id="places"><h2>Famous Places</h2><p class="sub">Top attractions compiled from travel sources.</p>
+<div class="grid" id="pl"></div></section>
+
+<section id="stay"><h2>Hotels &amp; Resorts</h2><p class="sub">Rated on Google Maps. Pick an area or search by name.</p>
+<div class="tools"><input id="hq" placeholder="Search hotels…"><select id="ha"><option value="">All areas</option><option>White Beach</option><option>Sabang</option><option>Aninuan</option><option>Talipanan</option><option>La Laguna</option></select></div>
+<div class="grid" id="hl"></div></section>
+
+<section id="rules"><h2>Website Policies &amp; Terms of Use</h2>
+<p class="sub">By using this website, you agree to the following.</p>
+<div class="grid">
+<div class="card"><h3>📜 Terms of Use</h3><ol class="rules"><li>This site is for personal, non-commercial trip planning.</li><li>Don't copy, scrape or resell its content without permission.</li><li>Don't misuse the site or try to disrupt, hack or overload it.</li><li>We may update or remove content and these terms at any time.</li></ol></div>
+<div class="card"><h3>🔒 Privacy</h3><ol class="rules"><li>No account or sign-up is required.</li><li>We don't ask for or store personal information such as names, emails or payment details.</li><li>Never send sensitive data through this site.</li><li>Any third-party links you open follow their own privacy policies.</li></ol></div>
+<div class="card"><h3>✅ Accuracy &amp; Liability</h3><ol class="rules"><li>Listings come from public sources and may be outdated or incomplete.</li><li>Confirm prices, availability and policies directly with each business before booking or paying.</li><li>The site is provided "as is", and we aren't liable for losses from relying on it.</li></ol></div>
+<div class="card"><h3>🤝 Fair Use &amp; Listings</h3><ol class="rules"><li>Listings are not paid promotions or endorsements.</li><li>This is an independent guide, not an official government site.</li><li>Business owners can ask for a listing to be corrected or removed.</li><li>Treat other users, locals and businesses with respect.</li></ol></div>
+</div>
+<div class="note">For emergencies in the Philippines, call 911. For official local rules, contact the Puerto Galera Tourism Office.</div></section>
+
+<div id="md"><div class="box" id="bx"></div></div>
+<footer>Independent visitor guide to Puerto Galera. Not affiliated with the municipal government. Info compiled Oct 2026.</footer>
+
+<script>
+const P=[["White Beach","Beach","🏖️","San Isidro","Longest, busiest beach with bars, resorts, water sports and sunsets.",["Popular with local tourists","Lively nightlife and many resorts","Good for sunset views"],"https://maps.google.com/?cid=17916629485186051200"],["Sabang Beach","Beach / Diving","🤿","Sabang","Dive-shop hub with coral reefs, snorkeling and nightlife.",["Go-to area for scuba divers","Many restaurants and bars","Jeepneys connect it to White Beach"]],["Tamaraw Falls","Waterfall","💧","Barangay Villaflor, along the national road","Roadside multi-tiered falls named after the Mindoro tamaraw.",["About 15 km from the town proper","Entrance fee reports vary (some say free, one recent review mentions ₱50), so check on arrival","Easy roadside stop with a swimming area at the bottom"],"https://maps.google.com/?cid=6350935344145337538"],["Talipanan Beach","Beach","🌅","Talipanan","Quieter, more tranquil stretch away from the White Beach crowd.",["Calm swimming and strolling","Pebbly in parts, so water may be less clear","Less crowded"],"https://maps.google.com/?cid=4548985617512380251"],["Aninuan Beach","Beach","🌴","Aninuan","Laid-back and cleaner water next to White Beach.",["Quieter than White Beach","Good for a relaxed stay"]],["Coral Garden","Snorkeling","🐠","Near Sabang","Shallow reef with colorful corals and fish.",["Beginner-friendly shallow water","Go with a guide or accredited operator","Don't touch the corals"]],["Talipanan Falls","Waterfall","💦","Between Talipanan and Aninuan","A small, photogenic waterfall reached by a short forest walk, rated 4.4 on Google.",["Roughly a 20-30 minute walk, per reviews","Stones can be slippery, so wear grippy footwear","Local guides are available"],"https://maps.google.com/?cid=8624901004134747790"],["Aninuan Falls","Trek","🥾","Near Aninuan","A waterfall about 2 km from White Beach.",["Requires roughly a 45-minute trek","Wear sturdy footwear","Best in dry weather"]],["Small & Big La Laguna","Beach","🌊","La Laguna","Quiet coves popular for snorkeling and relaxed stays.",["Good snorkeling access","Calmer than the main beaches"]]];
+const pl=document.getElementById("pl"),md=document.getElementById("md"),bx=document.getElementById("bx");
+pl.innerHTML=P.map((p,i)=>`<div class="card tap" data-i="${i}" tabindex="0" role="button"><span class="tag">${p[1]}</span><h3>${p[0]}</h3><p>${p[4]}</p><div class="more">Tap to view →</div></div>`).join("");
+function op(i){const p=P[i],q=encodeURIComponent(p[0].replace("&","and")+" Puerto Galera"),ml=p[6]||"https://www.google.com/maps/search/?api=1&query="+q;
+bx.innerHTML=`<div class="ban">${p[2]}</div><div class="bd"><span class="tag">${p[1]}</span><h3>${p[0]}</h3><p class="sub" style="margin:0 0 8px">📍 ${p[3]}, Puerto Galera</p><p>${p[4]}</p><ul>${p[5].map(x=>"<li>"+x+"</li>").join("")}</ul><div class="btns"><a class="pr" href="${ml}" target="_blank" rel="noopener">📷 See photos on Google Maps</a><a href="${ml}" target="_blank" rel="noopener">🗺️ Open map</a><button id="cl">Close</button></div></div>`;
+md.classList.add("on");document.getElementById("cl").onclick=cx}
+function cx(){md.classList.remove("on")}
+pl.onclick=e=>{const c=e.target.closest(".tap");if(c)op(+c.dataset.i)};
+pl.onkeydown=e=>{if(e.key=="Enter"){const c=e.target.closest(".tap");if(c)op(+c.dataset.i)}};
+md.onclick=e=>{if(e.target==md)cx()};document.onkeydown=e=>{if(e.key=="Escape")cx()};
+
+const H=[["Scandi Divers Resort","La Laguna","PADI 5-Star dive resort on Big La Laguna beach, known for food and small dive groups.",4.8,186,"1373834480679088491"],["Casalay Boutique Villas and Dive","Sabang","Quiet side of the coast, about a 10-minute boat ride from Sabang. Pool, dive shop and free kayaks.",4.8,170,"6574575298856457041"],["Blue Lagoon Dive Resort","La Laguna","At the water's edge on Small La Laguna, with a beachfront restaurant. Reachable on foot only.",4.8,125,"6412462649976874077"],["Orient De Galera Beach Resort","White Beach","Free shuttle to the port and the beach. Pet-friendly and walkable to White Beach.",4.6,78,"15488752246431799532"],["Puerto Galera Seaview Resort","Sabang","Pool, restaurant and a free shuttle to Sabang.",4.6,24,"14732547034543783551"],["Sunset at Aninuan Beach Resort","Aninuan","Quiet beachfront away from the party area, with two pools and a house reef for snorkeling.",4.5,289,"12502669484077276499"],["Playa Blanca Beach Resort & Dive Centre","White Beach","Far end of White Beach with sea views and a dive centre. Steep stairs.",4.4,163,"1849292279477470896"],["Tamaraw Beach Resort","Aninuan","Family-run beachfront resort with a pool and a pickleball court. Rooms are dated but large.",4.3,489,"5444875550101291545"]];
+const hq=document.getElementById("hq"),ha=document.getElementById("ha"),hl=document.getElementById("hl");
+function rh(){const q=hq.value.toLowerCase(),a=ha.value,r=H.filter(h=>(!a||h[1]==a)&&h[0].toLowerCase().includes(q));hl.innerHTML=r.length?r.map(h=>`<div class="card"><span class="tag">${h[1]}</span><h3>${h[0]}</h3><p>${h[2]}</p><p>⭐ ${h[3]} (${h[4]} Google reviews)</p><a class="more" href="https://maps.google.com/?cid=${h[5]}" target="_blank" rel="noopener">📷 Photos &amp; map →</a></div>`).join(""):'<p class="sub">No matches.</p>'}
+hq.oninput=ha.onchange=rh;rh();
+
+</script></body></html>
